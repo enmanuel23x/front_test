@@ -1,0 +1,24 @@
+{
+    "types": [
+        {"key":"HQ", "title": "Head Quarters"},
+        {"key":"Character", "title": "Characters"},
+        {"key":"Technology", "title": "Technologies"}
+    ],
+    "filters": [
+        {
+            "key": "CardType",
+            "title": "CARD TYPE",
+            "options": []
+        },
+        {
+            "key": "Faction",
+            "title": "FACTIONS",
+            "options": []
+        },
+        {
+            "key": "Rarity",
+            "title": "RARITY",
+            "options": []
+        }
+    ]
+}

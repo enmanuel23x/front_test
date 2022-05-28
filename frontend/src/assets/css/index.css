@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'Rajdhani';
+  src: local('MyFont'), url(../fonts/Rajdhani-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Rajdhani-bold';
+  src: local('MyFont'), url(../fonts/Rajdhani-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Rajdhani-semi-bold';
+  src: local('MyFont'), url(../fonts/Rajdhani-SemiBold.ttf) format('ttf');
+}
+
+body {
+  background-color: black;
+  font-family: 'Rajdhani';
+}
+
+.body-content {
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  margin: 0 5px;
+}
+
+.container {
+  text-align: left;
+}
+
+.container h2 {
+  color: white;
+}
+
+.filters {
+  display: none;
+  min-width: 40%;
+  max-width: 550px;
+  position: fixed;
+  background: black;
+  color: white;
+  height: -webkit-fill-available;
+  top: 0;
+  opacity: 0.9;
+  padding-top: 15px;
+  padding-left: 15px;
+  left: 0;
+  z-index: 3;
+  transition: transform .5s;
+  display: block;
+  transform: translateX(-100%);
+}
+
+.filters.active {
+  transform: translateX(0px);
+}
+
+.filters-content {
+  color: white;
+  display: block;
+  min-width: inherit;
+  margin-left: 20px;
+}
+
+.filter-group {
+  margin-left: 25px;
+}
+
+.filter-item {
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  display: table-header-group;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none
+}
+
+input[type=checkbox]:after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ff5c00;
+  background: transparent;
+  width: 15px;
+  height: 15px;
+  margin-right: .5em;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+input[type=checkbox]:disabled:after {
+  border: 1px solid gray;
+}
+
+input[type=checkbox]:checked:after {
+  content: '\2714';
+  font-size: 13px;
+  line-height: 1;
+  text-align: center;
+  color: white;
+}
+
+.btn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: initial;
+  padding: 2px 25px;
+  border: 3px solid #ff5c00;
+  background-color: transparent;
+  color: #ff5c00;
+  transform: skewx(30deg);
+}
+
+.btn span {
+  transform: skewx(-30deg);
+  font-size: 15px;
+}
+
+.btn svg {
+  transform: skewx(-30deg);
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.active {
+  display: block;
+}
+
+.btn {
+  margin-top: 15px;
+  margin-left: 7px;
+}
+
+.btn-mg {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.modal-btn {
+  overflow: hidden;
+  width: fit-content;
+  padding: 12px 5px;
+  margin: auto;
+}
+.card-group{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  grid-gap: 1rem;
+  justify-content: space-between;
+}
+
+.card-group::after {
+  content: "";
+  flex: auto;
+}
+.modal-btn:hover {
+  cursor: pointer;
+}
+
+.modal-btn img {
+  opacity: 0.8;
+}
+
+.modal-btn:hover img {
+  transition: all 0.5s;
+  transform: scale(1.1) rotate(0.01deg);
+  opacity: 1;
+}
+
+.modal-container {
+  position: fixed;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modal-container-bg {
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.8;
+}
+
+.modal-img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  box-shadow: 0px 0px 800px 40px rgba(0, 0, 0, 0.9);
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.disabled {
+  color: gray;
+}
+
+.search-bar {
+  display: flex;
+  min-width: 550px;
+  width: 80%;
+}
+
+.search-bar input {
+  width: 80%;
+  border: 2px solid #ff5c00;
+  background: transparent;
+  height: 25px;
+  text-indent: 45px;
+  border-radius: 3px;
+  color: white;
+}
+
+.search-bar input:focus {
+  outline: none !important;
+  border-color: #ff5c00;
+}
+
+.search-btn {
+  text-align: center;
+  width: 75px;
+  font-weight: bold;
+  height: 31px;
+  background-color: #ff5c00;
+  color: black;
+  margin-left: 5px;
+  border: 1px solid #ff5c00;
+  border-radius: 3px;
+}
+
+.flex-box {
+  display: flex;
+  width: -webkit-fill-available;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-icon {
+  color: white;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 15px;
+}
+
+.search-icon:hover,
+.search-btn {
+  cursor: pointer;
+}
